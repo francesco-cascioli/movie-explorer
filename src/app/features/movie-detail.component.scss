@@ -1,0 +1,97 @@
+.back-link {
+  display: inline-block;
+  margin: 16px;
+  color: #e50914;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 10%,
+    rgba(0, 0, 0, 0.4) 90%
+  );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  z-index: 1;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.hero-content .overview {
+  margin: 20px 0;
+  max-width: 600px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #e50914;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+.btn:hover {
+  background: #f40612;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+.error-msg {
+  text-align: center;
+  padding: 60px 20px;
+  color: #e50914;
+  font-size: 20px;
+  font-weight: bold;
+}
