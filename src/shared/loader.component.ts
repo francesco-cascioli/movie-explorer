@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styles: [`
    .loader {
   border: 6px solid rgba(255, 255, 255, 0.2);
-  border-top: 6px solid #e50914; /* rosso Netflix */
+  border-top: 6px solid #e50914; 
   border-radius: 50%;
   width: 60px;
   height: 60px;

@@ -6,7 +6,9 @@
   background: #111;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 1000;
 }
 
 .logo {
@@ -14,58 +16,98 @@
   font-weight: bold;
   color: #e50914;
   text-decoration: none;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  span.open:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  span.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  span.open:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
 
 .nav-links {
   display: flex;
   gap: 24px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+
+    &.active {
+      color: #e50914;
+      font-weight: 600;
+    }
+
+    &:hover {
+      color: #e50914;
+    }
+  }
 }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #e50914;
-}
-
-.nav-links a.active {
-  color: #e50914;
-  font-weight: 600;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: #fff;
-  cursor: pointer;
-}
 
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
-    display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
     right: 0;
     background: #111;
-    padding: 16px;
+    padding: 20px;
     gap: 16px;
-    width: 200px;
+    width: 220px;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
 
-  .nav-links.open {
-    display: flex;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+
+    &.open {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    a {
+      padding: 8px 0;
+    }
   }
 }

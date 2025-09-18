@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,6 +11,15 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   menuOpen = false;
+
+  constructor(private router: Router) {
+    
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.menuOpen = false;
+      }
+    });
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
