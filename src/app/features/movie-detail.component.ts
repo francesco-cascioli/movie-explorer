@@ -68,7 +68,6 @@ export class MovieDetailComponent implements OnInit, AfterViewInit, OnDestroy {
     window.removeEventListener('resize', this.setVh);
   }
 
-  /** Aggiorna la variabile CSS --vh in base all'altezza del viewport */
   private setVh = () => {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
