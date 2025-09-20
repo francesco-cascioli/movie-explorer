@@ -1,217 +1,97 @@
+🎬 Movie Explorer
 
+A modern Angular app to browse and discover movies from The Movie Database (TMDB).
+Built to practice Angular 19, standalone components, responsive design, and API integration — while keeping the UX smooth and mobile-friendly.
 
+🔗 Live Demo
 
+👉 Movie Explorer on Netlify
 
+🔍 Features
 
+🎬 Browse popular movies with dynamic backdrops
+🔎 Real-time search by title
+🎭 Filter by genre to discover new favorites
+⭐ Add/remove from personal watchlist (persisted in localStorage)
+📱 Responsive design with mobile viewport height fix (--vh)
+⚡ Loading indicators + error states for smooth UX
+❌ Graceful fallbacks for missing data/images
 
+🧱 Tech Stack
 
-✨ Features
+Angular 19 – component-based SPA
 
-🔍 Real-time movie search with instant results
-
-🎭 Genre filtering to discover movies by category
-
-📱 Fully responsive design optimized for all devices
-
-💾 Personal watchlist with local storage persistence
-
-🎬 Detailed movie information with high-quality images
-
-⚡ Fast and smooth user experience with modern animations
-
-🌐 Live demo available online
-
-🚀 Live Demo
-
-View Live Demo
- 🎯
-
-🛠️ Tech Stack
-Frontend
-
-Angular 19 – standalone components architecture
-
-TypeScript 5.7 – type-safe development
+TypeScript 5.7 – type safety everywhere
 
 SCSS – responsive styling with media queries
 
-RxJS – reactive programming for async operations
+RxJS – reactive programming
 
-Architecture
-
-Standalone Components – modern Angular structure
-
-Services & Facade Pattern – separation of concerns
-
-Reactive Forms – form handling and validation
-
-Angular Router – SPA navigation
-
-APIs & Data
+Angular Router – navigation
 
 TMDB API – movie data source
 
-Local Storage – watchlist persistence
+LocalStorage – watchlist persistence
 
-HTTP Client – RESTful API communication
-
-📱 Responsive Design
-
-Mobile-first approach with viewport height fix (--vh)
-
-Optimized for all screen sizes (320px → 4K)
-
-Touch-friendly interface with proper touch targets
-
-No horizontal scrolling issues
-
-Adaptive layouts for phones, tablets, desktops
-
-🎯 Key Features
-Movie Discovery
-
-Browse popular movies
-
-Search by title with real-time results
-
-Filter by genre (Action, Comedy, Drama, etc.)
-
-View detailed movie information
-
-User Experience
-
-Add/remove movies from personal watchlist
-
-Responsive image loading with fallbacks
-
-Smooth animations and transitions
-
-Loading states and error handling
-
-Technical Excellence
-
-Modern Angular 19 features
-
-Clean, maintainable code structure
-
-Type safety with TypeScript
-
-Organized SCSS styling
-
-Mobile-optimized performance
+📂 Project Structure
+src/
+ ├── app/
+ │   ├── core/         # services, models
+ │   ├── features/     # movie-list, movie-detail, watchlist
+ │   ├── shared/       # loader, reusable components
+ │   └── app.routes.ts # routing
+ ├── assets/           # static assets
+ ├── styles.scss       # global styles
+ └── index.html
 
 🚀 Getting Started
 Prerequisites
 
-Node.js (v18 or higher)
+Node.js (>= 18)
 
-npm or yarn
-
-Angular CLI
+Angular CLI installed
 
 Installation
-# Clone the repository
-git clone https://github.com/francescocascioli/movie-explorer.git
+git clone https://github.com/francesco-cascioli/movie-explorer.git
 cd movie-explorer
-
-# Install dependencies
 npm install
-
-# Start development server
 ng serve
 
-# Open browser at http://localhost:4200
 
-Build for Production
-ng build --configuration production
+Open 👉 http://localhost:4200
 
+🌟 Why this project?
 
-The build artifacts will be stored in the dist/ directory.
+I wanted to go beyond tutorials and:
 
-📁 Project Structure
-src/
-├── app/
-│   ├── core/
-│   │   ├── components/     # Shared components (navbar)
-│   │   ├── services/       # API services and business logic
-│   │   └── models/         # TypeScript interfaces
-│   ├── features/           # Feature modules
-│   │   ├── movie-list/     # Movie listing
-│   │   ├── movie-detail/   # Movie details
-│   │   └── watchlist/      # Watchlist
-│   └── shared/             # Shared utilities and components
-├── styles.scss             # Global styles and variables
-└── index.html              # Main HTML file
+Practice Angular standalone components
 
-🔧 Development
-Available Scripts
-# Development server
-ng serve
+Fix the real-world 100vh issue on mobile using a custom --vh variable
 
-# Build for production
-ng build
+Integrate a real external API (TMDB)
 
-# Run tests
-ng test
+Focus on UX details: loading states, fallbacks, responsive design
 
-# Lint code
-ng lint
-
-Environment Setup
-
-Create src/environments/environment.ts:
-
-export const environment = {
-  apiUrl: 'https://api.themoviedb.org/3',
-  apiKey: 'your-tmdb-api-key',
-  language: 'en-US'
-};
-
-🌟 Highlights
-
-Latest Angular 19 – cutting-edge features
-
-Mobile-First Design – optimized for mobile devices
-
-Clean Architecture – maintainable project structure
-
-Type Safety – full TypeScript integration
-
-Performance Optimized – fast loading and smooth UX
-
-Professional UI/UX – modern, intuitive interface
+Build something that feels like a real-world app 🎯
 
 📸 Screenshots
 
-Add screenshots of your application here (desktop + mobile views).
+Add desktop + mobile screenshots here.
 
-🤝 Contributing
+👤 Author
 
-Fork the repository
-
-Create a feature branch (git checkout -b feature/AmazingFeature)
-
-Commit your changes (git commit -m 'Add some AmazingFeature')
-
-Push to the branch (git push origin feature/AmazingFeature)
-
-Open a Pull Request
-
-📄 License
-
-This project is licensed under the MIT License – see the LICENSE
- file for details.
-
-👨‍💻 Author
-
-Francesco Cascioli
-
-🌐 Portfolio
-
-💼 LinkedIn
+Francesco Cascioli – Front-end developer in training
+📍 Umbria, Italy
 
 🐙 GitHub
 
-⭐ Star this repository if you found it helpful!
+💼 LinkedIn
 
-Vuoi che ti aggiunga anche una sezione "Known Issues / Future Improvements" come nel primo README (NYT Clone) per dare un tocco più “developer journal”?
+📄 License
+
+This project is for educational purposes only.
+All movie data and images are provided by TMDB
+.
+
+⭐ If you like this project, give it a star on GitHub
+!
