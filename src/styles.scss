@@ -1,4 +1,3 @@
-/* Variabili globali */
 :root {
   --primary: #e50914;  
   --secondary: #333;
@@ -6,7 +5,6 @@
   --text: #fff;
 }
 
-/* Reset base */
 * {
   box-sizing: border-box;
 }
@@ -16,7 +14,7 @@ html, body {
   padding: 0;
   width: 100%;
   max-width: 100vw;
-  overflow-x: hidden; /* Previene scroll orizzontale globale */
+  overflow-x: hidden;
 }
 
 body {
@@ -26,7 +24,6 @@ body {
   line-height: 1.5;
 }
 
-/* Layout details */
 .details {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -39,7 +36,6 @@ body {
   }
 }
 
-/* Search bar */
 .search-bar {
   margin: 16px 0;
   display: flex;
@@ -74,7 +70,6 @@ body {
   }
 }
 
-/* Filters */
 .filters {
   margin: 16px 0;
   color: #fff;
@@ -95,14 +90,13 @@ body {
   }
 }
 
-/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 16px;
   width: 100%;
   max-width: 100%;
-  padding: 0 16px; /* Padding laterale per evitare che tocchi i bordi */
+  padding: 0 16px;
   box-sizing: border-box;
 }
 
@@ -110,12 +104,12 @@ body {
   .grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    padding: 0 12px; /* Padding ridotto su mobile */
+    padding: 0 12px;
   }
   
   .search-bar {
     padding: 0 12px;
-    flex-wrap: wrap; /* Permette ai bottoni di andare a capo se necessario */
+    flex-wrap: wrap;
   }
   
   .filters {
@@ -127,7 +121,7 @@ body {
   .grid {
     grid-template-columns: 1fr;
     gap: 10px;
-    padding: 0 8px; /* Padding ancora più ridotto su smartphone piccoli */
+    padding: 0 8px;
   }
   
   .search-bar {
@@ -139,7 +133,6 @@ body {
   }
 }
 
-/* Buttons */
 .btn {
   padding: 10px 16px;
   border: none;
@@ -169,7 +162,6 @@ body {
   }
 }
 
-/* Error message */
 .error-msg {
   text-align: center;
   padding: 30px;
@@ -178,7 +170,6 @@ body {
   font-weight: bold;
 }
 
-/* Cards */
 .card {
   display: block;
   background: #111;          
@@ -187,14 +178,14 @@ body {
   text-decoration: none;
   color: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 100%; /* Previene overflow */
+  max-width: 100%;
 
   img {
     display: block;
     width: 100%;
     height: auto;
-    max-width: 100%; /* Assicura che l'immagine non superi il container */
-    object-fit: cover; /* Mantiene le proporzioni */
+    max-width: 100%;
+    object-fit: cover;
   }
 
   .meta {
@@ -218,7 +209,6 @@ body {
   }
 }
 
-/* Controllo globale per tutti i componenti */
 app-root, 
 app-movie-list, 
 app-movie-detail, 
@@ -229,7 +219,6 @@ app-watchlist {
   overflow-x: hidden;
 }
 
-/* --- MEDIA QUERIES GLOBALI --- */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
