@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MovieService } from '../core/services/movie.service';
@@ -13,20 +13,17 @@ import { LoaderComponent } from '../../shared/loader.component';
     RouterModule,
     LoaderComponent,
   ],
-   styleUrls: ['./movie-detail.component.scss'],
+  styleUrls: ['./movie-detail.component.scss'],
   template: `
-    
-
 <div *ngIf="movie !== null; else loading">
 
   <div *ngIf="!movie" class="error-msg">
     <p>Movie not found.</p>
   </div>
 
-
   <div *ngIf="movie as m" 
        class="hero"
-       [style.background-image]="'url(https://image.tmdb.org/t/p/original' + m.backdrop_path + ')'">
+       [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/original' + m.backdrop_path + ')'}">
 
     <div class="overlay"></div>
 
@@ -43,11 +40,10 @@ import { LoaderComponent } from '../../shared/loader.component';
   </div>
 </div>
 
-
 <ng-template #loading><app-loader></app-loader></ng-template>
   `
 })
-export class MovieDetailComponent implements OnInit {
+export class MovieDetailComponent implements OnInit, AfterViewInit, OnDestroy {
   private route = inject(ActivatedRoute);
   private movieSvc = inject(MovieService);
   private watchlistSvc = inject(WatchlistService);
@@ -62,6 +58,21 @@ export class MovieDetailComponent implements OnInit {
       this.inWatchlist = this.watchlistSvc.isInWatchlist(res.id);
     });
   }
+
+  ngAfterViewInit(): void {
+    this.setVh();
+    window.addEventListener('resize', this.setVh);
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('resize', this.setVh);
+  }
+
+  /** Aggiorna la variabile CSS --vh in base all'altezza del viewport */
+  private setVh = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
 
   toggleWatchlist() {
     if (!this.movie) return;
