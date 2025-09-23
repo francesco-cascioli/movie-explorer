@@ -93,5 +93,40 @@ This project is for educational purposes only.
 All movie data and images are provided by TMDB
 .
 
+<<<<<<< HEAD
 ⭐ If you like this project, give it a star on GitHub
 !
+=======
+## 📸 Screenshots
+
+*Add screenshots of your application here*
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Francesco Cascioli**
+- LinkedIn: [Francesco Cascioli](https://www.linkedin.com/in/francesco-cascioli-190833304/)
+- GitHub: [@francesco-cascioli](https://github.com/francesco-cascioli)
+- Portfolio: [Francesco Portfolio](https://francesco-cascioli.github.io/Francesco-Portfolio/)
+
+## 🙏 Acknowledgments
+
+- [The Movie Database (TMDB)](https://www.themoviedb.org/) for the amazing API
+- [Angular Team](https://angular.io/) for the fantastic framework
+- [Netlify](https://netlify.com/) for hosting
+
+---
+
+⭐ **Star this repository if you found it helpful!**
+>>>>>>> 599c05c (Update portfolio link to live website)
