@@ -1,61 +1,63 @@
-Movie Explorer
+🎬 Movie Explorer
 
-An Angular app to search movies, view details, and save a watchlist. Data is sourced from TMDB.
+An Angular web app to discover movies, explore details, and build your personal watchlist.
+This project fetches data from the official TMDB API and allows users to search, filter, and save favorites.
 
-Demo
+Built to practice and demonstrate front-end development skills with Angular, TypeScript, RxJS, and localStorage.
 
-Live: https://movie-angular-explorer.netlify.app
+🔗 Live Demo: movie-angular-explorer.netlify.app
 
-Features
+🔍 Features
 
-Search movies by title
+🎥 Search movies by title
+🔥 Browse popular movies with genre filters
+📖 View detailed info (overview, rating, release date)
+⭐ Add/remove movies from a personal watchlist (saved in localStorage)
+📱 Responsive design optimized for mobile
+🛠️ Admin page to add/edit movies (local only, no backend)
+🔔 Smooth UX with clear navigation and layout
 
-Popular movies with genre filter
+🧱 Tech Stack
 
-Movie detail (overview, rating, release date)
+Angular 19 – component-based UI framework
 
-Watchlist stored locally (localStorage)
+TypeScript – type-safe JavaScript
 
-Responsive layout optimized for mobile
+RxJS – reactive data handling
 
-Admin page to add/edit titles (local only)
+SCSS – modular styling
 
-Tech Stack
+TMDB API – movie data source (HTTP Client)
 
-Angular 19, TypeScript, RxJS
+localStorage – client-side persistence
 
-SCSS
+📁 Project Structure
+src/
+ ├── app/
+ │   ├── components/   # Reusable UI components
+ │   ├── pages/        # Route views (Home, Details, Admin, Watchlist)
+ │   ├── services/     # API & data logic
+ │   ├── environments/ # API config
+ │   └── app.module.ts # Root Angular module
 
-TMDB API (HTTP Client)
+🤔 Why this project?
 
-Quick Start
+This app was developed to apply Angular fundamentals while adding custom features.
+I focused on:
 
-Prerequisites: Node 18+, Angular CLI
+Structuring modules, components, and services clearly
 
-git clone https://github.com/francesco-cascioli/movie-explorer.git
-cd movie-explorer
-npm install
-ng serve
-# http://localhost:4200
+Integrating an external API (TMDB) with error handling
 
+Managing local persistence (favorites/watchlist)
 
-Production build:
+Ensuring responsive, mobile-friendly design
 
-ng build --configuration production
+Thinking like a developer building a product, not just a student project
 
-API Configuration
+👤 Author
 
-Set your TMDB key in src/app/environments/environment.development.ts:
-
-export const environment = {
-  apiUrl: 'https://api.themoviedb.org/3',
-  apiKey: 'YOUR_TMDB_API_KEY',
-  language: 'en-US'
-};
-
-Links
-
-Demo: https://movie-angular-explorer.netlify.app
+Francesco Cascioli – Front-end Developer
 
 Source: https://github.com/francesco-cascioli/movie-explorer
 
