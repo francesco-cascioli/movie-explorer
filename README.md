@@ -5,7 +5,7 @@ This project fetches data from the official TMDB API and allows users to search,
 
 Built to practice and demonstrate front-end development skills with Angular, TypeScript, RxJS, and localStorage.
 
-🔗 Live Demo: movie-angular-explorer.netlify.app
+🔗 Live Demo: https://movie-angular-explorer.netlify.app
 
 🔍 Features
 
